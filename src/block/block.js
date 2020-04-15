@@ -12,7 +12,7 @@ import './editor.scss';
 	
 
 	registerBlockType('vizzi/video-embed', { // The name of our block. Must be a string with prefix. Example: my-plugin/my-custom-block.
-	  title: __('VRIKS Video'), // The title of our block.
+	  title: __('Video'), // The title of our block.
 	  description: __('A custom block for displaying Videos.'), // The description of our block.
 	  icon: 'format-video', // Dashicon icon for our block. Custom icons can be added using inline SVGs.
 	  category: 'common', // The category of the block.
@@ -100,7 +100,7 @@ import './editor.scss';
 						}
 					}
 			},
-				el('h3',{}, "VRIKS Video"),
+				el('h3',{}, "Video"),
 				el('input', {class:"video_input", id:"url_input", placeholder:"Insert Video URL to embed"}),
 				el('input', {class:"video_input", id:"width_input", placeholder:"Insert Video Width"}),<br></br>,
 				el('input', {class:"video_input", id:"height_input", placeholder:"Insert Video Height"}),<br></br>,
@@ -209,21 +209,6 @@ import './editor.scss';
 				)
 			}
 			
-			else if(video_Source.indexOf("www.vriks.de/") != -1 && video_Source.indexOf("www.vriks.de/videos/") != 1){ //check if is youtube media
-				return(
-					<figure className={ props.className }>
-						<div className={ props.className }>
-							{/* <h1>Source youtube - {video_Title}</h1> */}
-
-							{/*<video id="my-player" class="video-js regular-player vjs-default-skin vjs-big-play-centered" style="margin-bottom: 20px;" width={video_Width} height={video_Height} preload="metadata" width="" controls crossorigin="anonymous" muted>
-								<source src={video_Source} type="video/youtube"></source>
-							</video>*/}
-
-							<iframe src={video_Source} width={video_Width} height={video_Height} frameborder="0" allowfullscreen></iframe>
-						</div>
-					</figure>
-				)
-			}
 
 			else if(video_Source.indexOf("player.twitch.tv/") != -1){ //check if is twitch media
 				return(
