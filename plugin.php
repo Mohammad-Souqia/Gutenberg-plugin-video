@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: VRIKS Video
+ * Plugin Name: Video
  * Plugin URI:  
  * Description: Plugin to embed Videos.
  * Author: Mohammad Souqia
